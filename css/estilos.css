@@ -1,0 +1,203 @@
+body {
+  font-family: 'Inter', sans-serif; /* Fuente genérica */
+  background-color: #013663; /* Color de fondo claro */
+  color: #333; /* Color de texto oscuro */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* encabezado */
+header {
+  background-image: url(../img/Agua.png);
+  padding: 1rem 0;
+  width: 100%;
+}
+/* Contenedor dentro del encabezado para centrar y espaciar */
+header > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(69, 125, 230, 0.4);
+}
+
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(../img/arena.png); /* Fondo para el menú desplegado */
+  background-size: cover; /* Hace que la imagen cubra todo el nav */
+  background-position: center; /* Hace que se muestre la parte central de la imagen */
+  border-radius: 0 0 0.75rem 0.75rem;
+  overflow: hidden; /* Para que los bordes redondeados se apliquen bien */
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+nav li {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+/* para evitar espacio innecesario despues del ultimo elemento */
+nav li:last-child {
+  margin-bottom: 0;
+}
+
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #861515;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Incluye relleno y borde en el ancho */
+}
+nav a:hover, nav a:focus {
+  background-color: rgba(179, 103, 33, 0.4); /* Un tono más oscuro al pasar el ratón */
+  border-radius: 0.5rem;
+}
+
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  /* Margen superior e inferior para separar del encabezado y del pie de
+  * página */
+}
+
+
+section {
+  background-color: #E5F7FC;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+
+article {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+article:last-child {
+  border-bottom: none;
+}
+
+
+h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+h2 {
+  font-size: 1.5rem; /* Tamaño de fuente para h2 */
+  font-weight: 600;
+  color: #013663; /* Azul para los títulos */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.textoBienvenida {
+  font-size: 1.5rem; /* Tamaño de fuente para h2 */
+  font-weight: 600;
+  color: #E5F7FC; /* Azul para los títulos */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.25rem; /* Tamaño de fuente para h3 */
+  font-weight: 500;
+  color: #013663; /* Azul para los títulos */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+h4 {
+  font-size: 1.15rem; /* Tamaño de fuente para h3 */
+  font-weight: 500;
+  color: #013663; /* Azul para los títulos */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+
+p {
+  margin-bottom: 1rem;
+  color: #555; /* Color de texto más suave para párrafos */
+}
+.datos {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 1rem auto;
+}
+.logo {
+  max-width: 40%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 1rem auto;
+}
+.criaturas {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+.recompensa {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+
+a {
+  color: #3498db; /* Color para enlaces */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  background-color: #002546;
+  color: #E5F7FC;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  color: #E5F7FC;
+}
