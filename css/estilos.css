@@ -1,20 +1,21 @@
+
 body {
-  font-family: 'Inter', sans-serif; /* Fuente genérica */
-  background-color: #013663; /* Color de fondo claro */
-  color: #333; /* Color de texto oscuro */
+  font-family: 'Vollkorn', serif; /* Fuente genérica */
+  background-color: #013663; /* Color de fondo */
+  color: #333;
   line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
-
-/* encabezado */
+/* Encabezado */
 header {
   background-image: url(../img/Agua.png);
   padding: 1rem 0;
   width: 100%;
 }
-/* Contenedor dentro del encabezado para centrar y espaciar */
+
+/* Contenedor dentro del encabezado */
 header > div {
   max-width: 1200px;
   margin: 0 auto;
@@ -26,18 +27,54 @@ header > div {
   background-color: rgba(69, 125, 230, 0.4);
 }
 
-
+/* Botón del menú hamburguesa */
+button.hamburger-menu {
+  display: block;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: #E5F7FC;
+  font-size: 1.5rem;
+  background-color: #013663;
+  border: 1px solid #E5F7FC;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1000;
+}
 /* Menú de navegación */
+
+/* Menú de navegación cerrado */
 nav {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-image: url(../img/arena.png); /* Fondo para el menú desplegado */
-  background-size: cover; /* Hace que la imagen cubra todo el nav */
-  background-position: center; /* Hace que se muestre la parte central de la imagen */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-image: url(../img/arena.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
   border-radius: 0 0 0.75rem 0.75rem;
-  overflow: hidden; /* Para que los bordes redondeados se apliquen bien */
+  overflow: hidden;
+
+  /* Animación */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease,
+              transform 0.3s ease,
+              visibility 0.3s ease;
 }
+
+/* Menú abierto */
+nav.nav-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -46,16 +83,19 @@ nav ul {
   flex-direction: column;
   width: 100%;
 }
+
 nav li {
   margin-bottom: 0.5rem;
   width: 100%;
 }
-/* para evitar espacio innecesario despues del ultimo elemento */
+
+/* Elimina el espacio después del último elemento */
 nav li:last-child {
   margin-bottom: 0;
 }
 
 
+/* Enlaces del menú */
 nav a {
   display: block;
   padding: 0.75rem 1rem;
@@ -65,92 +105,99 @@ nav a {
   transition: background-color 0.3s ease;
   text-align: center;
   width: 100%;
-  box-sizing: border-box; /* Incluye relleno y borde en el ancho */
-}
-nav a:hover, nav a:focus {
-  background-color: rgba(179, 103, 33, 0.4); /* Un tono más oscuro al pasar el ratón */
-  border-radius: 0.5rem;
+  box-sizing: border-box;
 }
 
+nav a:hover,
+nav a:focus {
+  background-color: rgba(179, 103, 33, 0.4);
+  border-radius: 0.5rem;
+}
 
 main {
   padding: 1rem;
   max-width: 1200px;
   margin: 2rem auto;
-  /* Margen superior e inferior para separar del encabezado y del pie de
-  * página */
 }
 
 
+/* Contenedor general de las secciones */
 section {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 2rem;
+  box-shadow: none;
+  border: none;
+}
+
+/* Cada bloque de contenido */
+article {
   background-color: #E5F7FC;
   border-radius: 0.75rem;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(1, 54, 99, 0.2);
 }
 
-
-article {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
+/* Elimina el borde inferior que tenían los artículos */
 article:last-child {
   border-bottom: none;
 }
 
-
+/* Título principal oculto visualmente, pero accesible */
 h1 {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
 }
+
 h2 {
-  font-size: 1.5rem; /* Tamaño de fuente para h2 */
-  font-weight: 600;
-  color: #013663; /* Azul para los títulos */
+  font-size: 1.5rem;
+  color: #013663;
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: bold;
 }
+
 .textoBienvenida {
-  font-size: 1.5rem; /* Tamaño de fuente para h2 */
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #E5F7FC; /* Azul para los títulos */
+  color: #E5F7FC;
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
 h3 {
-  font-size: 1.25rem; /* Tamaño de fuente para h3 */
+  font-size: 1.25rem;
   font-weight: 500;
-  color: #013663; /* Azul para los títulos */
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-h4 {
-  font-size: 1.15rem; /* Tamaño de fuente para h3 */
-  font-weight: 500;
-  color: #013663; /* Azul para los títulos */
+  color: #013663;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
+h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #013663;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
 
 p {
   margin-bottom: 1rem;
-  color: #555; /* Color de texto más suave para párrafos */
+  color: #555;
 }
+
 .datos {
   margin-bottom: 1rem;
   font-weight: bold;
 }
-
 
 img {
   max-width: 100%;
@@ -159,6 +206,7 @@ img {
   display: block;
   margin: 1rem auto;
 }
+
 .logo {
   max-width: 40%;
   height: auto;
@@ -166,12 +214,21 @@ img {
   display: block;
   margin: 1rem auto;
 }
+
+.cristales {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
 .criaturas {
   max-width: 20%;
   height: auto;
   display: block;
   margin: 1rem auto;
 }
+
 .recompensa {
   max-width: 30%;
   height: auto;
@@ -179,15 +236,14 @@ img {
   margin: 1rem auto;
 }
 
-
 a {
-  color: #3498db; /* Color para enlaces */
+  color: #3498db;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
-
 
 footer {
   background-color: #002546;
@@ -197,7 +253,33 @@ footer {
   margin-top: 2rem;
   width: 100%;
 }
+
 footer p {
   margin: 0;
   color: #E5F7FC;
+}
+
+/* Menú en pantallas de PC */
+@media (min-width: 768px) {
+  nav {
+    width: max-content;
+    min-width: 0;
+    left: 1rem;
+    top: 4rem;
+  }
+
+  nav ul {
+    width: max-content;
+    padding: 0.5rem 0;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+  }
 }

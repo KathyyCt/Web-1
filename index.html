@@ -9,9 +9,16 @@
 <body>
   <header>
     <div>
+      <button class = "hamburger-menu"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="main-nav">
+      &#9776; 
+    </button>
       <h1>Wiki: Beyond the Mist</h1>
       <img class = "logo" src="img/BeyondTheMist.png"
       alt="Logo - 'Beyond the Mist'"
+
       >
       <h2 class = "textoBienvenida" >Bienvenido a la Wiki oficial de Beyond the Mist</h2>
       <nav id="main-nav">
@@ -27,33 +34,35 @@
   </header>
   <main>
     <section>
-      <h2>Sobre el juego</h2>
-      <p>
-        El protagonista es una persona común que atraviesa una difícil situación económica. 
-        En busca de dinero, consigue trabajo como personal de limpieza en un barco.<br>
-        Durante el viaje, una violenta tormenta azota la embarcación y provoca un naufragio. 
-        El protagonista cae al mar y, después de perder el conocimiento, despierta en una isla 
-        desconocida.
-      </p>
-      <p>
-        La isla está completamente rodeada por una enorme niebla espesa que impide ver 
-        qué existe más allá. Adentrándose en la isla, hay un reino donde sus habitantes 
-        llevan generaciones viviendo aislados y creen que no existe nada fuera de ella.<br>
-        La isla, además, está habitada por criaturas extrañas y fantásticas: seres mitológicos 
-        desconocidos, bestias nunca vistas y enormes dragones que forman parte del ecosistema del
-         lugar.
-      </p>
-      <p>
-        Al llegar al reino, el protagonista descubre que la población vive en condiciones de 
-        extrema pobreza, mientras que una pequeña élite cercana al Rey disfruta de grandes 
-        riquezas y privilegios.<br>
-        Sin dinero y sin una forma de regresar a casa, el protagonista encuentra una oportunidad 
-        en el Gremio de Cazadores, una organización encargada de eliminar criaturas consideradas 
-        peligrosas para los habitantes.
-      </p>
-      <p>
-        Así comienza su aventura.
-      </p>
+      <article>
+        <h2>Sobre el juego</h2>
+        <p>
+          El protagonista es una persona común que atraviesa una difícil situación económica. 
+          En busca de dinero, consigue trabajo como personal de limpieza en un barco.<br>
+          Durante el viaje, una violenta tormenta azota la embarcación y provoca un naufragio. 
+          El protagonista cae al mar y, después de perder el conocimiento, despierta en una isla 
+          desconocida.
+        </p>
+        <p>
+          La isla está completamente rodeada por una enorme niebla espesa que impide ver 
+          qué existe más allá. Adentrándose en la isla, hay un reino donde sus habitantes 
+          llevan generaciones viviendo aislados y creen que no existe nada fuera de ella.<br>
+          La isla, además, está habitada por criaturas extrañas y fantásticas: seres mitológicos 
+          desconocidos, bestias nunca vistas y enormes dragones que forman parte del ecosistema del
+           lugar.
+        </p>
+        <p>
+          Al llegar al reino, el protagonista descubre que la población vive en condiciones de 
+          extrema pobreza, mientras que una pequeña élite cercana al Rey disfruta de grandes 
+          riquezas y privilegios.<br>
+          Sin dinero y sin una forma de regresar a casa, el protagonista encuentra una oportunidad 
+          en el Gremio de Cazadores, una organización encargada de eliminar criaturas consideradas 
+          peligrosas para los habitantes.
+        </p>
+        <p>
+          Así comienza su aventura.
+        </p>
+      </article>
       <article>
         <h3>Reino Aetheria</h3>
         <p>
@@ -160,7 +169,7 @@
       </article>
       <article>
         <h3>Cristal Vital</h3>
-        <img src="img/Cristales.png"
+        <img class= "cristales" src="img/Cristales.png"
         alt="Descripción de la imagen genérica del equipo"
         >        
         <p>
@@ -212,5 +221,6 @@
       <p>&copy; 2026 Beyond the Mist. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script src="js/base.js"></script>
 </body>
 </html>
